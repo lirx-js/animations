@@ -1,4 +1,3 @@
-import { math_clamp } from '../../math/clamp';
 import { ITransitionProgress, IVoidTransitionFunction } from '../transition-function.type';
 import { parallelTransitions } from './parallel-transitions';
 
@@ -21,25 +20,23 @@ export function sequentialTransitions(
   let step: number = 0;
   for (let i = 0; i < length; i++) {
     const [transition, weight] = transitions[i];
-    const origin: number = step;
+    const start: number = step;
     const range: number = weight / total;
     step += range;
+    const end: number = step;
 
     _transitions[i] = (
       progress: ITransitionProgress,
     ): void => {
-      if (progress >= origin) {
-        transition(math_clamp((progress - origin) / range, 0, 1));
+      if (progress <= start) {
+        transition(0);
+      } else if (progress >= end) {
+        transition(1);
+      } else {
+        transition((progress - start) / range);
       }
     };
   }
 
   return parallelTransitions(_transitions);
-  // return (
-  //   progress: ITransitionProgress,
-  // ): void => {
-  //   for (let i = 0; i < length; i++) {
-  //     _transitions[i](progress);
-  //   }
-  // };
 }

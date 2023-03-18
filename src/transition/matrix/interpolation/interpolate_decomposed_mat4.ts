@@ -1,6 +1,5 @@
-import { quat } from '../../../math/math-gl/quat/quat.type';
-import { vec3 } from '../../../math/math-gl/vec3/vec3.type';
-import { vec4 } from '../../../math/math-gl/vec4/vec4.type';
+
+import { quat, vec3, vec4 } from '@lifaon/math';
 import { interpolate_perspective } from './interpolate_perspective';
 import { interpolate_quaternions } from './interpolate_quaternions';
 import { interpolate_scaling } from './interpolate_scaling';

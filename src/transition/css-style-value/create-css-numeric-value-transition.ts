@@ -1,3 +1,4 @@
+import { CSSNumericValue } from '../../types/w3c-css-typed-object-model-level-1.types';
 import { ITransitionFunction, ITransitionProgress } from '../transition-function.type';
 
 export function createCSSNumericValueTransition(

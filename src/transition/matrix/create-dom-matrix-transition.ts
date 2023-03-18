@@ -1,4 +1,4 @@
-import { mat4 } from '../../math/math-gl/mat4/mat4.type';
+import { mat4 } from '@lifaon/math';
 import { mapTransition } from '../modifiers/map-transition';
 import { ITransitionFunction } from '../transition-function.type';
 import { createTransformMatrixTransition } from './create-transform-matrix-transition';

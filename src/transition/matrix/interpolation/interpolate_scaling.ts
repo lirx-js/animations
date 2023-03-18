@@ -1,5 +1,4 @@
-import { vec3 } from '../../../math/math-gl/vec3/vec3.type';
-import { vec3_linear_interpolation } from '../../../math/math-gl/vec3/vec3_linear_interpolation';
+import { vec3, vec3_linear_interpolation } from '@lifaon/math';
 
 export function interpolate_scaling(
   origin: vec3,

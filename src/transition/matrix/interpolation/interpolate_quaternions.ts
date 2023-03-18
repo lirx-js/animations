@@ -1,5 +1,4 @@
-import { quat } from '../../../math/math-gl/quat/quat.type';
-import { quat_slerp } from '../../../math/math-gl/quat/quat_slerp';
+import { quat, quat_slerp } from '@lifaon/math';
 
 /**
  * From: https://drafts.csswg.org/css-transforms-2/#interpolation-of-decomposed-3d-matrix-values

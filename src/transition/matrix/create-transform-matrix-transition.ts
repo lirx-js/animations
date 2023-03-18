@@ -1,21 +1,23 @@
-import { mat4_create } from '../../math/math-gl/mat4/mat4_create';
-import { mat4_decompose } from '../../math/math-gl/mat4/mat4_decompose';
-import { mat4_recompose } from '../../math/math-gl/mat4/mat4_recompose';
-import { matrix_to_string } from '../../math/math-gl/matrix_to_string';
-import { quat_copy } from '../../math/math-gl/quat/quat_copy';
-import { quat_create } from '../../math/math-gl/quat/quat_create';
-import { quat_equals } from '../../math/math-gl/quat/quat_equals';
-import { vec3_copy } from '../../math/math-gl/vec3/vec3_copy';
-import { vec3_create } from '../../math/math-gl/vec3/vec3_create';
-import { vec3_equals } from '../../math/math-gl/vec3/vec3_equals';
-import { vec4_copy } from '../../math/math-gl/vec4/vec4_copy';
-import { vec4_create } from '../../math/math-gl/vec4/vec4_create';
-import { vec4_equals } from '../../math/math-gl/vec4/vec4_equals';
+import {
+  mat4,
+  mat4_create,
+  mat4_decompose,
+  mat4_recompose,
+  matrix_to_string,
+  quat,
+  quat_copy,
+  quat_create,
+  quat_equals,
+  vec3,
+  vec3_copy,
+  vec3_create,
+  vec3_equals,
+  vec4,
+  vec4_copy,
+  vec4_create,
+  vec4_equals,
+} from '@lifaon/math';
 import { ITransitionFunction, ITransitionProgress } from '../transition-function.type';
-import { mat4 } from '../../math/math-gl/mat4/mat4.type';
-import { quat } from '../../math/math-gl/quat/quat.type';
-import { vec3 } from '../../math/math-gl/vec3/vec3.type';
-import { vec4 } from '../../math/math-gl/vec4/vec4.type';
 import { interpolate_decomposed_mat4 } from './interpolation/interpolate_decomposed_mat4';
 import { interpolate_translation } from './interpolation/interpolate_translation';
 

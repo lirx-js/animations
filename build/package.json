@@ -1,6 +1,6 @@
 {
   "name": "ts-lib-seed",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "Seed to build a library",
   "main": "index.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "dev:package:tcs:cjs:linux": "echo 'dev:package:tcs:cjs:linux' && tsc-watch -p tsconfig/tsconfig.build.package.cjs.json --onSuccess 'yarn run dev:package:tcs:cjs:onsuccess'",
     "dev:package:tcs:cjs:onsuccess": "echo 'dev:package:tcs:cjs:onsuccess' && yarn run build:package:rename:cjs",
     "_____SCSS_____": "",
-    "copy:scss-files": "node tools/package/copy/copy-scss-files.js",
+    "copy:scss-files": "echo 'copy:scss-files' && node tools/copy/copy-scss-files.js",
     "_________________INDEX_FILES_________________": "",
     "comment:index-files": "node tools/index/comment-index-files.js",
     "uncomment:index-files": "node tools/index/comment-index-files.js --uncomment",
@@ -43,7 +43,7 @@
     "publish:package": "cd ../dist && yarn publish --access public",
     "link:package": "cd ../dist && yarn link",
     "_________________OTHERS_________________": "",
-    "clean:dist": "echo 'clean:dist' && shx rm -rf ../dist/*",
+    "clean:dist": "echo 'clean:dist' && find ../ -path '../dist/*' -delete",
     "generate:toc": "markdown-toc ../README.md",
     "comment:build:package": "yarn run uncomment:index-files && yarn run build:package && yarn run comment:index-files",
     "ncu": "npx npm-check-updates"
@@ -64,7 +64,6 @@
     "html-minifier": "^4.0.0",
     "postcss": "^8.4.16",
     "sass": "^1.54.9",
-    "shx": "^0.3.4",
     "tsc-watch": "^5.0.3",
     "tslib": "^2.4.0",
     "typescript": "^4.8.3"

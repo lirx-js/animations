@@ -1,5 +1,8 @@
-import { createCSSStyleValueTransition } from './create-css-style-value-transition';
+import { CSSStyleValue } from '../../types/w3c-css-typed-object-model-level-1.types';
+import { mapTransition } from '../modifiers/map-transition';
 import { ITransitionFunction } from '../transition-function.type';
+import { createCSSStyleValueTransition } from './create-css-style-value-transition';
+import { getCSSStyleValue } from '../../types/get/get-css-style-value';
 
 export function createUnparsedCSSStyleValueTransition(
   propertyName: string,
@@ -7,9 +10,15 @@ export function createUnparsedCSSStyleValueTransition(
   target: string,
   element?: HTMLElement,
 ): ITransitionFunction<string> {
-  return createCSSStyleValueTransition(
-    CSSStyleValue.parse(propertyName, origin),
-    CSSStyleValue.parse(propertyName, target),
-    element,
+  return mapTransition(
+    createCSSStyleValueTransition(
+      getCSSStyleValue().parse(propertyName, origin),
+      getCSSStyleValue().parse(propertyName, target),
+      element,
+    ),
+    (value: CSSStyleValue): string => {
+      return value.toString();
+    },
   );
 }
+

@@ -1,5 +1,4 @@
-import { vec4 } from '../../../math/math-gl/vec4/vec4.type';
-import { vec4_linear_interpolation } from '../../../math/math-gl/vec4/vec4_linear_interpolation';
+import { vec4, vec4_linear_interpolation } from '@lifaon/math';
 
 export function interpolate_perspective(
   origin: vec4,

@@ -11,5 +11,9 @@
   "author": "Valentin Richard",
   "license": "MIT",
   "access": "public",
-  "dependencies": {}
+  "sideEffects": false,
+  "dependencies": {
+    "@lifaon/math": "^1.0.0",
+    "@lirx/promise": "^1.1.0"
+  }
 }

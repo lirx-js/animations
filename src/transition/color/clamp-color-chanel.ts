@@ -1,4 +1,4 @@
-import { math_clamp } from '../../math/clamp';
+import { math_clamp } from '@lifaon/math';
 
 export function clampColorChanel(
   value: number,
