@@ -13,7 +13,6 @@
   "access": "public",
   "sideEffects": false,
   "dependencies": {
-    "@lifaon/math": "^1.0.0",
-    "@lirx/promise": "^1.1.0"
+    "@lifaon/math": "latest"
   }
 }

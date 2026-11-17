@@ -1,7 +1,7 @@
-import { math_clamp } from '@lifaon/math';
+import { math_clamp, math_round } from '@lifaon/math';
 
 export function clampColorChanel(
   value: number,
 ): number {
-  return math_clamp(Math.round(value), 0, 0xff);
+  return math_clamp(math_round(value), 0, 0xff);
 }

@@ -3,6 +3,7 @@
  * BezierEasing - use bezier curve for transition easing function
  * by Gaëtan Renaudeau 2014 - 2015 – MIT License
  */
+import { math_abs } from '@lifaon/math';
 
 // These values are established by empiricism with tests (tradeoff: performance VS precision)
 const NEWTON_ITERATIONS: number = 4;
@@ -67,7 +68,7 @@ function binarySubdivide(
     } else {
       aA = currentT;
     }
-  } while (Math.abs(currentX) > SUBDIVISION_PRECISION && ++i < SUBDIVISION_MAX_ITERATIONS);
+  } while (math_abs(currentX) > SUBDIVISION_PRECISION && ++i < SUBDIVISION_MAX_ITERATIONS);
   return currentT;
 }
 

@@ -1,3 +1,4 @@
+import { math_min } from '@lifaon/math';
 import { ITransitionProgress, IVoidTransitionFunction } from '../transition/transition-function.type';
 
 export interface IAnimateOptions {
@@ -32,7 +33,7 @@ export function animate(
 
       const loop = () => {
         timer = requestAnimationFrame(() => {
-          progress = Math.min(1, (Date.now() - originTime) / duration);
+          progress = math_min(1, (Date.now() - originTime) / duration);
           transition(progress);
 
           if (progress < 1) {
